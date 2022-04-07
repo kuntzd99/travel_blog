@@ -8,10 +8,9 @@ const mapStateToProps = ({ commentState }) => {
   return { commentState }
 }
 
-const mapDispatchToPros = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
   return {
     fetchComments: (id) => dispatch(LoadComments(id))
-    // postComment: (formValue) => dispatch(CreateComment(formValue))
   }
 }
 
@@ -38,4 +37,4 @@ const LocationDetails = (props) => {
   )
 }
 
-export default connect(mapStateToProps, mapDispatchToPros)(LocationDetails)
+export default connect(mapStateToProps, mapDispatchToProps)(LocationDetails)

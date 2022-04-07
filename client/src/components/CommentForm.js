@@ -4,13 +4,13 @@ import {
   AddUsername,
   AddCommentBody
 } from '../store/actions/CommentAction'
-import { useNavigate, useParams, Link } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 
 const mapStateToProps = ({ commentState }) => {
   return { commentState }
 }
 
-const mapDispatchToPros = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
   return {
     postComment: (formValue) => dispatch(CreateComment(formValue)),
     addUsername: (formValue) => dispatch(AddUsername(formValue)),
@@ -30,8 +30,6 @@ const CommentForm = (props) => {
     event.preventDefault()
     props.addCommentBody(event.target.value)
   }
-
-  let navigate = useNavigate()
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -67,4 +65,4 @@ const CommentForm = (props) => {
   )
 }
 
-export default connect(mapStateToProps, mapDispatchToPros)(CommentForm)
+export default connect(mapStateToProps, mapDispatchToProps)(CommentForm)

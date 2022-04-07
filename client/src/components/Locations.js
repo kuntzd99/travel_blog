@@ -7,7 +7,7 @@ const mapStateToProps = ({ locationState }) => {
   return { locationState }
 }
 
-const mapDispatchToPros = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
   return {
     fetchLocations: () => dispatch(LoadLocations())
   }
@@ -33,4 +33,4 @@ const Locations = (props) => {
   )
 }
 
-export default connect(mapStateToProps, mapDispatchToPros)(Locations)
+export default connect(mapStateToProps, mapDispatchToProps)(Locations)

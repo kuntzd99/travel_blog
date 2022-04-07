@@ -12,7 +12,6 @@ export const GetComments = async (id) => {
 export const CreateNewComment = async (formValue) => {
   try {
     const res = await Client.post('/comments', formValue)
-    console.log(res.data, 'comment res')
     return res.data
   } catch (error) {
     throw error
