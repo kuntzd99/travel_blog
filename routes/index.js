@@ -10,6 +10,8 @@ router.get('/likes/:id', likesController.getLikesByLocation)
 
 router.get('/comments/:id', commentController.getCommentsByLocation)
 
+router.get('/locations/:id', locationController.getLocationbyId)
+
 router.post('/comments', commentController.createComment)
 
 router.put('/likes/:id', likesController.updateLikes)

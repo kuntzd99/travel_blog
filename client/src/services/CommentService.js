@@ -12,7 +12,7 @@ export const GetComments = async (id) => {
 export const CreateNewComment = async (formValue) => {
   try {
     const res = await Client.post('/comments', formValue)
-    return res.data
+    return res.data.comment
   } catch (error) {
     throw error
   }

@@ -1,4 +1,5 @@
 export const GET_LOCATIONS = 'GET_LOCATIONS'
+export const GET_LOCATION = 'GET_LOCATION'
 export const GET_COMMENTS = 'GET_COMMENTS'
 export const GET_LIKES = 'GET_LIKES'
 export const POST_COMMENT = 'POST_COMMENT'

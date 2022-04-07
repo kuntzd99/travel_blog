@@ -4,7 +4,7 @@ import {
   AddUsername,
   AddCommentBody
 } from '../store/actions/CommentAction'
-import { useParams, Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 const mapStateToProps = ({ commentState }) => {
   return { commentState }
@@ -60,7 +60,6 @@ const CommentForm = (props) => {
         />
         <button type="submit">Submit</button>
       </form>
-      <Link to={`/${id}`}>Back</Link>
     </div>
   )
 }

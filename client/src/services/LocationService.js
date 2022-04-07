@@ -8,3 +8,12 @@ export const GetLocations = async () => {
     throw error
   }
 }
+
+export const GetLocation = async (id) => {
+  try {
+    const res = await Client.get(`/locations/${id}`)
+    return res.data.location
+  } catch (error) {
+    throw error
+  }
+}

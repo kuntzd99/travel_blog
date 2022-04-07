@@ -9,6 +9,16 @@ const getAllLocations = async (req, res) => {
   }
 }
 
+const getLocationbyId = async (req, res) => {
+  try {
+    const location = await Location.findById(req.params.id)
+    return res.status(200).json({ location })
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 module.exports = {
-  getAllLocations
+  getAllLocations,
+  getLocationbyId
 }
