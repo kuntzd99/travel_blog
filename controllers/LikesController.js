@@ -18,6 +18,19 @@ const getLikesByLocation = async (req, res) => {
   }
 }
 
+const updateLikes = async (req, res) => {
+  try {
+    const like = await Likes.findById(req.params.id)
+    like.likes = req.body.likes
+    like.location = req.body.location
+    like.save()
+    res.status(200).json({ like })
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 module.exports = {
-  getLikesByLocation
+  getLikesByLocation,
+  updateLikes
 }

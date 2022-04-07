@@ -1,1 +1,7 @@
 export const GET_LOCATIONS = 'GET_LOCATIONS'
+export const GET_COMMENTS = 'GET_COMMENTS'
+export const GET_LIKES = 'GET_LIKES'
+export const POST_COMMENT = 'POST_COMMENT'
+export const PUT_LIKE = 'PUT_LIKE'
+export const NEW_COMMENT_BODY = 'NEW_COMMENT_BODY'
+export const NEW_USERNAME = 'NEW_USERNAME'
