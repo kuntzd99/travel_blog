@@ -7,3 +7,5 @@ const Likes = new Schema(
   },
   { timestamps: true }
 )
+
+module.exports = Likes
